@@ -1,0 +1,33 @@
+
+
+<h2>Books</h2>
+
+        <table>
+        <tr>
+        <th>本のタイトル</th>
+        <th>本の感想</th>
+        </tr>
+        <% @opinions.each do |opinion| %>
+        <tr>
+        <td><%= link_to opinion.title, opinion_path(opinion) %></td>
+        <td><%= opinion.body %></td>
+        </tr>
+         <% end %>
+
+
+<h2>New Book投稿</h2>
+<%= form_for(@opinion) do |f| %>
+ 
+    <h4>タイトル</h4>
+    <%= f.text_field :title %>
+ 
+    <h4>本文</h4>
+    <%= f.text_area :body %>
+ 
+    <%= f.submit '投稿' %>
+ 
+<% end %>
+
+
+      
+

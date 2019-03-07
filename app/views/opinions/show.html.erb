@@ -1,0 +1,11 @@
+<h4>title</h4>
+<p><%= @opinion.title %></p>
+<h4>body</h4>
+<p><%= @opinion.body %></p>
+<!-- 編集部分 -->
+<%= link_to "編集", edit_opinion_path(@opinion) %>
+
+<!-- 削除部分 -->
+<%= link_to "削除", opinion_path(@opinion), method: :delete %>
+
+<h4><%= link_to "戻る", opinions_path %></h4>
