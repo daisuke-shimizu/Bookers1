@@ -12,7 +12,7 @@ class OpinionsController < ApplicationController
   def create
     opinion = Opinion.new(opinion_params)
     opinion.save
-    redirect_to opinions_path
+    redirect_to opinion_path(opinion)
   end
 
   def show
